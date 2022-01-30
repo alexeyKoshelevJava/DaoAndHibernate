@@ -23,7 +23,8 @@ public class PersonsRepositoryImpl implements PersonsRepository {
     @Override
     public List<Persons> getPersonsByCity(String city) {
         createPersons();
-        Query query = entityManager.createQuery("select p from Persons p where p.city='Moscow'",Persons.class);
+        Query query = entityManager.createQuery("select p from Persons p where p.city= :city",Persons.class);
+        query.setParameter("city",city);
         var resultList = query.getResultList();
         return resultList;
 
