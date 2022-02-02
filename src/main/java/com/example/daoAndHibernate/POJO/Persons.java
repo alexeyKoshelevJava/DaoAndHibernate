@@ -3,10 +3,8 @@ package com.example.daoAndHibernate.POJO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
 import javax.persistence.*;
-import java.io.Serializable;
+
 
 @Entity
 @Table(name = "persons")
@@ -18,7 +16,7 @@ public class Persons {
     private PersonsId personsId;
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
-    @Column(name = "city_of_living",nullable = false)
+    @Column(name = "city_of_living", nullable = false)
     private String city;
 
 
