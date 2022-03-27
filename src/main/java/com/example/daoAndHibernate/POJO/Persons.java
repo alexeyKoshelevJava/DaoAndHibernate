@@ -18,6 +18,10 @@ public class Persons {
     private String phoneNumber;
     @Column(name = "city_of_living", nullable = false)
     private String city;
+    @Column (name = "pass")
+    private String pass;
+    @Column (name = "roll")
+    private String roll;
 
 
 }
